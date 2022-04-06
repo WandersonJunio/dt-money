@@ -3,7 +3,10 @@ import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
 import totalImg from '../../assets/total.svg';
 
-export function Summary() {
+export function Summary(props: any) {
+  const { valorEntrada, valorSaida } = props.props;
+  console.log(valorEntrada)
+  
   return (
     <Container>
       <div>
@@ -11,14 +14,14 @@ export function Summary() {
           <p>Entradas</p>
           <img src={incomeImg} alt="Entradas" />
         </header>
-        <strong>R$1000,00</strong>
+        <strong>R${valorEntrada}</strong>
       </div>
       <div>
         <header>
           <p>Saidas</p>
           <img src={outcomeImg} alt="Saidas" />
         </header>
-        <strong>-R$1000,00</strong>
+        <strong>R$ {valorSaida}</strong>
       </div>
       <div className="highligth-background">
         <header>
