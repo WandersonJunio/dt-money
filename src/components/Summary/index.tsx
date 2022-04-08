@@ -5,7 +5,6 @@ import totalImg from '../../assets/total.svg';
 
 export function Summary(props: any) {
   const { valorEntrada, valorSaida } = props.props;
-  console.log(valorEntrada)
   
   return (
     <Container>
